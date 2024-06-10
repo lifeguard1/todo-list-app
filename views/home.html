@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Home Page</title>
+    <link rel="icon" href="/images/logo-rounded.png" type="image/icon type">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="/css/home.css">
+</head>
+<body>
+  
+  <nav>
+    <div class="nav-contents">
+   <div class="left-side">
+     <div class="logo-container">
+      <img width="35px" src="/images/logo.png">
+     </div>
+
+     <div class="navlinks">
+      <a href="./home"><img width="20px" class=" nav-img dashboard" src="/images/dashboard.png"><p>Dashboard</p></a>
+      <a href="./analytics"><img width="24px" class=" nav-img analytics" src="/images/analytics.png">Analytics</a>
+      <a href="./settings"><img width="24px" class="nav-img settings" src="/images/settings.png">Settings</a>
+    </div>
+   </div>
+    <div class="navprofile">
+     <img width="30px" class="profile" src="/images/woman.png">
+    </div>
+    </div>
+  </nav>
+  <div class="home-container">
+  <main class="home">
+
+    <section class="title-boxes">
+      <h1 class="greeting">Hello, <span class="username">Nikos</span></h1>
+      <div class="box-container">
+
+        <div class="box-child box-child-todo" data-category="todo">
+          <div class=" box-child-inner box-child-todo-inner">
+            <h3>TODO</h3>
+            <p><span class="todo-count count">10</span> Tasks</p>
+          </div>
+        </div>
+        <div class="box-list">
+          
+        </div>
+        <button class="plus plus1">+</button>
+
+        <div class="box-child box-child-doing" data-category="doing">
+          <div class="box-child-inner box-child-doing-inner">
+            <h3>DOING</h3>
+            <p><span class="doing-count count">10</span> Tasks</p>
+          </div>
+        </div>
+      
+        <div class="box-child box-child-done" data-category="done">
+          <div class="box-child-inner box-child-done-inner">
+            <h3>DONE</h3>
+            <p><span class="done-count count">10</span> Tasks</p>
+          </div>
+        </div>
+      </div>
+
+    </section>
+    <section class="brief-analysis">
+      <h1 class="title-brief-analysis">Brief Analysis</h1>
+    </section>
+  </main>
+  </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="/js/home.js"></script>
+</body>
+</html>

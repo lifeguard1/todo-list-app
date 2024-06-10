@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Authentication Page</title>
+    <link rel="icon" href="/images/logo-rounded.png" type="image/icon type">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="/css/login.css">
+</head>
+<body>
+    <div class="container">
+        <div class="login-container box">
+            <h1 class="title">Welcome</h1>
+            <img class="logo" src="/images/logo.png" alt="Logo">
+            <form action="/api/login" method="POST" autocomplete="on">
+                <input type="text" name="username" placeholder="Username" class="input-field" required>
+                <br><br>
+                <input type="password" name="password" placeholder="Password" class="input-field" required>
+                <br><br>
+                <div class="login-button-container btn-container">
+                    <div class="login-button-wrap btn-wrap">
+                        <button class="login-button btn" type="submit">LOGIN</button>
+                    </div>
+                </div>
+            </form>
+            <p class="text">Don't have an account? <span class="signup-p href">Sign-up!</span></p>
+        </div>
+        <div class="register-container box">
+            <h1 class="title">Welcome</h1>
+            <img class="logo" src="/images/logo.png" alt="Logo">
+            <form action="/api/register" method="POST" autocomplete="off">
+                <input type="email" autocomplete="false" name="hidden_email" placeholder="Email" class="input-field" required>
+                <br><br>
+                <input type="text" autocomplete="false" name="hidden_username" placeholder="Username" class="input-field" required>
+                <br><br>
+                <input type="password" autocomplete="false" name="hidden_password" placeholder="Password" class="input-field" required>
+                <br><br>
+                <div class="register-button-container btn-container">
+                    <div class="register-button-wrap btn-wrap">
+                        <button class="register-button btn" type="submit">SIGN-UP</button>
+                    </div>
+                </div>
+            </form>
+            <p class="text">Already have an account? <span class="login-p href">Login!</span></p>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="/js/login.js"></script>
+</body>
+</html>

@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+  
+body{
+    font-family: "Nunito", sans-serif;
+    background-color: #f2f2f2;
+}
+
+.container{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+}
+
+.box{
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border: none;
+  border-radius: 10px;
+  justify-content: center;
+  align-items: center;
+  width: 390px;
+  box-shadow: 0 5px 10px 0 rgba(0,0,0,.1);
+  padding: 77px 55px 33px;
+  overflow: hidden;
+}
+
+.login-container{
+  display: flex;
+}
+
+.register-container{
+  display: none;
+}
+
+.title{
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  display: block;
+  font-size: 30px;
+  color: #333;
+  line-height: 1.2;
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+.logo{
+  width: 35px;
+  margin-top: -50px;
+  margin-bottom: 2rem;
+}
+
+.input-field{
+  border: none;
+  background-color: white;
+  border-bottom: 2px solid #adadad;
+  padding: 0 5px;
+  font-size: 15px;
+  line-height: 1.2;
+  display: block;
+  width: 120%;
+  height: 45px;
+  box-sizing: border-box;
+}
+
+form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 30px white inset !important; /* Set the background color to white */
+    -webkit-text-fill-color: #000 !important; /* Set the text color to black */
+}
+
+.input-field:focus{
+   outline: none;
+   border-image: linear-gradient(#00A09B, #51C1D3) 30;
+}
+
+.btn-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.btn-wrap{
+  width: 300%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn{
+  border: none;
+  font-family: "Nunito", sans-serif;
+  border-radius: 25px;
+  background: linear-gradient(#00A09B, #51C1D3);
+  color: white;
+  padding: 13px;
+  width: 100%;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btn:active{
+  background: linear-gradient(#16b7b1, #60aab5);
+}
+
+.text{
+  color: #adadad;
+  font-size: 13px;
+  margin-top: 2rem;
+}
+
+.href{
+  color: black;
+  cursor: pointer;
+}
+
+@media(max-width: 476px) {
+  .box {
+      padding:77px 15px 33px
+  }
+}
+
+@media(max-width: 275px) {
+  .input-field{
+    width: 100%;
+  }
+}
