@@ -1,4 +1,17 @@
 $(document).ready(function () {
+
+    function getCookie(name) {
+        const value = `; ${document.cookie}`;
+        const parts = value.split(`; ${name}=`);
+        if (parts.length === 2) return parts.pop().split(';').shift();
+    }
+
+    // Set the username in the span with class 'username'
+    const username = getCookie('username');
+    if (username) {
+        $('.username').text(username);
+    }
+
     const todo = $('.box-child-todo');
     const doing = $('.box-child-doing');
     const done = $('.box-child-done');

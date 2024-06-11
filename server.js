@@ -51,12 +51,12 @@ app.post('/api/register', (req, res) => {
     db.run(sql, params, function (err) {
         if (err) {
             console.error('Error during registration:', err.message);
-            return res.status(400).json({ error: 'Registration failed', details: err.message });
+            return res.redirect('/register?error=Registration failed');
         }
         console.log('User registered with ID:', this.lastID);
         const token = jwt.sign({ id: this.lastID }, SECRET_KEY, { expiresIn: 86400 }); // 24 hours
         res.cookie('token', token, { httpOnly: true, secure: true, sameSite: 'Strict' });
-        res.status(201).json({ message: 'Registration successful', token });
+        return res.redirect('/login');
     });
 });
 
@@ -70,20 +70,21 @@ app.post('/api/login', (req, res) => {
     db.get(sql, params, (err, user) => {
         if (err) {
             console.error('Error during login:', err.message);
-            return res.status(400).json({ error: 'Login failed', details: err.message });
+            return res.redirect('/login?error=Login failed');
         }
         if (!user) {
-            return res.status(404).json({ error: 'User not found' });
+            return res.redirect('/login?error=User not found');
         }
 
         const passwordIsValid = bcrypt.compareSync(password, user.password);
         if (!passwordIsValid) {
-            return res.status(401).json({ error: 'Invalid password' });
+            return res.redirect('/login?error=Invalid password');
         }
 
         const token = jwt.sign({ id: user.id }, SECRET_KEY, { expiresIn: 86400 }); // 24 hours
         res.cookie('token', token, { httpOnly: true, secure: true, sameSite: 'Strict' });
-        res.status(200).json({ message: 'Login successful', token });
+        res.cookie('username', username, { httpOnly: false, secure: false, sameSite: 'Strict' });
+        return res.redirect('/home');
     });
 });
 
