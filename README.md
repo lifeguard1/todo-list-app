@@ -54,3 +54,10 @@ Todo List App built with Node.js, Express, and SQLite, featuring user authentica
 - Login with your credentials
 - Add, edit, and delete tasks in different categories (Todo, Doing, Done)
 - Tasks are saved to your user account and can be managed across sessions
+
+## Example
+
+<div style="display: flex; flex-direction: row;">
+<img width="50%" src="./public/images/home-page.png">
+<img width="50%" src="./public/images/tasks.png">
+</div>
