@@ -7,42 +7,50 @@
     box-sizing: border-box;
 }
   
-body{
+body {
     font-family: "Nunito", sans-serif;
     background-color: #f2f2f2;
-}
-
-.container{
-    width: 100%;
     min-height: 100vh;
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    padding: 15px;
+    margin: 0;
 }
 
-.box{
-  display: flex;
-  flex-direction: column;
-  background-color: white;
-  border: none;
-  border-radius: 10px;
-  justify-content: center;
-  align-items: center;
-  width: 390px;
-  box-shadow: 0 5px 10px 0 rgba(0,0,0,.1);
-  padding: 77px 55px 33px;
-  overflow: hidden;
+.card {
+    width: 100%;
+    transform-style: preserve-3d;
+    transition: transform 1s ease;
+    position: relative;
+    width: 390px;
+    perspective: 800px;
 }
 
-.login-container{
-  display: flex;
+.box {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border: none;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    box-shadow: 0 5px 10px 0 rgba(0,0,0,.1);
+    padding: 77px 55px 33px;
+    overflow: hidden;
+    backface-visibility: hidden;
+    position: absolute;
+    transition: height 0.5s;
 }
 
-.register-container{
-  display: none;
+.register-container {
+    transform: rotateY(180deg);
 }
+
+.card.flipped {
+    transform: rotateY(180deg);
+}
+
 
 .title{
   font-family: "Poppins", sans-serif;
